@@ -1,3 +1,7 @@
+# FocusAura
+A minimal, aesthetic app for focused productivity. Features a customizable timer, motivating achievements, and detailed stats to track your progress and enhance concentration.
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
