@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Focus Aura</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .background-options {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .background-options input[type="file"],
+    .background-options input[type="color"] {
+      margin: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <button class="nav-btn" id="focus-btn">Focus</button>
+  <button class="nav-btn" id="achievements-btn">Achievements</button>
+  <button class="nav-btn" id="stats-btn">Stats</button>
+</div>
+
+<!-- Timer Container -->
+<div class="timer-container">
+  <div class="timer-glass">
+
+    <!-- Mode Buttons -->
+    <div class="mode-buttons">
+      <button class="mode-btn short-break">Short Break</button>
+      <button class="mode-btn long-break">Long Break</button>
+    </div>
+
+    <!-- Timer Display -->
+    <div id="timer">25:00</div>
+
+    <!-- Control Buttons -->
+    <div class="controls">
+      <button class="control-btn">Start</button>
+      <button class="control-btn">Reset</button>
+    </div>
+
+    <!-- Background Customizer (moved inside timer-glass) -->
+    <div class="background-options">
+      <h3>Customize Background</h3>
+      <input type="color" id="bg-color-picker" title="Pick a gradient color" />
+      <input type="file" id="bg-image-upload" accept="image/*" title="Upload an image background" />
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  const colorPicker = document.getElementById('bg-color-picker');
+  const imageUpload = document.getElementById('bg-image-upload');
+
+  colorPicker.addEventListener('input', (e) => {
+    document.body.style.background = e.target.value;
+    document.body.style.backgroundImage = 'none';
+  });
+
+  imageUpload.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        document.body.style.backgroundImage = `url('${evt.target.result}')`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+
+</body>
+</html>

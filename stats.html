@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Focus Stats</title>
+<link rel="stylesheet" href="stats.css" />
+</head>
+<body class="stats-page">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-buttons">
+    <button id="focus-btn">Focus</button>
+     <button id="achievements-btn">Achievements</button>
+    <button id="stats-btn" class="active">Stats</button>
+  </div>
+</nav>
+
+<!-- Stats Section -->
+<main class="stats-container">
+  <h1>Focus Stats</h1>
+  <p>Track your progress and milestones</p>
+
+  <section class="stats-cards">
+    <div class="stat-card">
+      <h2>Total Focus Time</h2>
+      <p>0 hours</p>
+    </div>
+    <div class="stat-card">
+      <h2>Total Sessions</h2>
+      <p>0</p>
+    </div>
+    <div class="stat-card">
+      <h2>Current Streak</h2>
+      <p>0 days</p>
+    </div>
+    <div class="stat-card">
+      <h2>Weekly Progress</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <h2>All Time Records</h2>
+      <p>Longest streak: 0 days</p>
+    </div>
+    <div class="stat-card">
+      <h2>Today's Breakdown</h2>
+      <p>0 focus sessions</p>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+<script src="background.js"></script>
+
+</body>
+</html>

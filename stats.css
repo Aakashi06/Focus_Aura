@@ -1,0 +1,104 @@
+/* stats.css */
+
+/* Page background and font */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e4abc9 0%, #93aecb 100%);
+  color: #1b1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.navbar-buttons button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  color: #0a0a0a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar-buttons button.active,
+.navbar-buttons button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Stats container */
+.stats-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.stats-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stats-container p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid of stat cards */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Individual stat card */
+.stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Progress bar styles */
+.progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  height: 10px;
+  overflow: hidden;
+  margin-top: 0.75rem;
+}
+
+.progress {
+  background: #fff;
+  height: 10px;
+  border-radius: 1rem;
+  width: 0%;
+  transition: width 0.5s;
+}
